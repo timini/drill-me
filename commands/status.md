@@ -10,7 +10,7 @@ Report on the user's learning state. Read-only — no teaching, no ledger writes
 
 1. Run `date +%Y-%m-%d`.
 2. Read `~/.drill-me/index.md` and every file in `~/.drill-me/topics/`.
-   If the directory doesn't exist, say so and suggest `/drill-me <topic>` to start.
+   If the directory doesn't exist, say so and suggest `/drill:me <topic>` to start.
 3. Print a compact report:
    - A table of topics: cards, due now, next due date, last session.
    - **Weak spots**: cards flagged `cw` (confident-wrong) or `leech`, and any card with

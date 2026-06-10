@@ -7,7 +7,7 @@
   "description": "drill-me — an adaptive tutor for Claude Code",
   "plugins": [
     {
-      "name": "drill-me",
+      "name": "drill",
       "source": "./",
       "description": "The inverse of /grill-me: an adaptive tutor that teaches you anything — spaced repetition, retrieval practice, and a memory that persists between sessions.",
       "category": "productivity",

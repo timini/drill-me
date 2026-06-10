@@ -8,10 +8,13 @@ you at the difficulty sweet spot, and remembers exactly what you were shaky on �
 across sessions, across projects, forever (or until you `rm -rf ~/.drill-me`).
 
 ```
-/drill-me rust lifetimes
-/drill-me this repo's auth flow
-/drill-me ~/papers/attention-is-all-you-need.pdf
+/drill:me rust lifetimes
+/drill:me this repo's auth flow
+/drill:me ~/papers/attention-is-all-you-need.pdf
 ```
+
+(Yes, the command reads as a sentence. Or skip the slash entirely and just tell
+Claude "drill me on rust lifetimes" — it knows what you mean.)
 
 No walls of text. No "Great question! Here are 7 key points." One question at a time,
 relentlessly — just in the other direction.
@@ -43,7 +46,7 @@ Every rule in drill-me's playbook has a citation. The full receipts are in
 ## What a session looks like
 
 ```text
-You:    /drill-me git rebase
+You:    /drill:me git rebase
 
 Claude: Before we start — what do you already know about rebase?
         Even fragments are fine.
@@ -82,8 +85,8 @@ that card is due today, and the card you flubbed is due first.
 
 ## What it can teach
 
-- **Anything Claude knows** — `/drill-me bayesian statistics`, `/drill-me kubernetes networking`
-- **Your own codebase** — `/drill-me this repo's payment flow`. It explores the code
+- **Anything Claude knows** — `/drill:me bayesian statistics`, `/drill:me kubernetes networking`
+- **Your own codebase** — `/drill:me this repo's payment flow`. It explores the code
   first, then drills you on it, anchoring every question to real `file:line`s. Great for
   onboarding (or for finally understanding the legacy service you inherited).
 - **Documents** — point it at a PDF, a file, or a URL and get drilled on *that*.
@@ -93,14 +96,14 @@ that card is due today, and the card you flubbed is due first.
 ```bash
 # in Claude Code:
 /plugin marketplace add timrichardson/drill-me
-/plugin install drill-me@drill-me
+/plugin install drill@drill-me
 ```
 
 Then:
 
 ```
-/drill-me <anything>
-/drill-status        # what's due, weak spots, what to study next
+/drill:me <anything>
+/drill:status        # what's due, weak spots, what to study next
 ```
 
 <details>
@@ -138,8 +141,8 @@ database, no sync, no account.
 ```
 drill-me/
 ├── commands/
-│   ├── drill-me.md            # the command — lean, ~60 lines
-│   └── drill-status.md        # progress dashboard
+│   ├── me.md                  # /drill:me — the tutor, lean ~60 lines
+│   └── status.md              # /drill:status — progress dashboard
 ├── reference/
 │   ├── scheduling.md          # the FSRS-style algorithm + ledger format
 │   └── teaching-playbook.md   # session structure, hint ladder, difficulty servo

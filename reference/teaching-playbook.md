@@ -75,7 +75,7 @@ drilling one thing, and that's exactly why it works."
 2. **Learner writes the summary**, not you: "Give me your 3-bullet takeaway." You only
    correct errors and name what they missed — the gaps become next session's queue.
 3. Update the ledger per `scheduling.md`, regenerate `index.md`.
-4. Sign off with concrete next steps: "Run `/drill-me <topic>` on Thursday — 3 cards
+4. Sign off with concrete next steps: "Run `/drill:me <topic>` on Thursday — 3 cards
    come due, including the one you were confident-wrong about."
 
 ## The difficulty servo (85% rule)
