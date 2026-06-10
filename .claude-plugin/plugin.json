@@ -1,0 +1,13 @@
+{
+  "name": "drill-me",
+  "displayName": "drill-me",
+  "version": "1.0.0",
+  "description": "The inverse of /grill-me: an adaptive tutor that teaches you anything — spaced repetition, retrieval practice, and a memory that persists between sessions.",
+  "author": {
+    "name": "Tim Richardson",
+    "url": "https://github.com/timrichardson"
+  },
+  "repository": "https://github.com/timrichardson/drill-me",
+  "license": "MIT",
+  "keywords": ["learning", "tutor", "spaced-repetition", "flashcards", "education", "fsrs", "teaching"]
+}
