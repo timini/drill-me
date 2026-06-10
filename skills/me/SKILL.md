@@ -1,4 +1,5 @@
 ---
+name: drill-me
 description: Teach the user a topic as an adaptive tutor — retrieval practice, spaced repetition with decay, and persistent memory in ~/.drill-me/. Use when the user wants to learn or be drilled on something, says "drill me on X", "teach me X", or wants to study a topic, a codebase, or a document.
 argument-hint: <topic | path | url>
 allowed-tools: "Read Write Edit Glob Grep Bash AskUserQuestion WebFetch"
@@ -16,9 +17,9 @@ suggestions if context makes some obvious).
 ## Boot sequence (do this silently, before saying anything substantive)
 
 1. Run `date +%Y-%m-%d` to get today's date.
-2. Read `${CLAUDE_PLUGIN_ROOT}/reference/scheduling.md` — the memory ledger format and
+2. Read `${CLAUDE_SKILL_DIR}/reference/scheduling.md` — the memory ledger format and
    spaced-repetition algorithm. Follow its arithmetic exactly.
-3. Read `${CLAUDE_PLUGIN_ROOT}/reference/teaching-playbook.md` — the session playbook.
+3. Read `${CLAUDE_SKILL_DIR}/reference/teaching-playbook.md` — the session playbook.
    Its rules are binding.
 4. Check `~/.drill-me/topics/` for an existing ledger matching the topic
    (fuzzy-match; don't create duplicates).

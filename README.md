@@ -93,6 +93,8 @@ that card is due today, and the card you flubbed is due first.
 
 ## Install
 
+As a plugin:
+
 ```bash
 # in Claude Code:
 /plugin marketplace add timini/drill-me
@@ -104,6 +106,12 @@ Then:
 ```
 /drill:me <anything>
 /drill:status        # what's due, weak spots, what to study next
+```
+
+Or as standalone skills (gives you bare `/drill-me` and `/drill-status`):
+
+```bash
+npx skills add timini/drill-me
 ```
 
 <details>
@@ -140,12 +148,14 @@ database, no sync, no account.
 
 ```
 drill-me/
-├── commands/
-│   ├── me.md                  # /drill:me — the tutor, lean ~60 lines
-│   └── status.md              # /drill:status — progress dashboard
-├── reference/
-│   ├── scheduling.md          # the FSRS-style algorithm + ledger format
-│   └── teaching-playbook.md   # session structure, hint ladder, difficulty servo
+├── skills/
+│   ├── me/
+│   │   ├── SKILL.md           # /drill:me — the tutor, lean ~60 lines
+│   │   └── reference/
+│   │       ├── scheduling.md          # the FSRS-style algorithm + ledger format
+│   │       └── teaching-playbook.md   # session structure, hint ladder, difficulty servo
+│   └── status/
+│       └── SKILL.md           # /drill:status — progress dashboard
 └── docs/
     └── the-science.md         # citations for every design decision
 ```
