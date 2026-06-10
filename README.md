@@ -95,7 +95,7 @@ that card is due today, and the card you flubbed is due first.
 
 ```bash
 # in Claude Code:
-/plugin marketplace add timrichardson/drill-me
+/plugin marketplace add timini/drill-me
 /plugin install drill@drill-me
 ```
 
@@ -110,7 +110,7 @@ Then:
 <summary>Try it without installing</summary>
 
 ```bash
-git clone https://github.com/timrichardson/drill-me
+git clone https://github.com/timini/drill-me
 claude --plugin-dir ./drill-me
 ```
 </details>
