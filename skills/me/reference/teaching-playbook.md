@@ -1,6 +1,7 @@
 # drill-me teaching playbook
 
-How to run the session. The science behind each rule is in `docs/the-science.md`;
+How to run the session. The science behind each rule is in
+[docs/the-science.md](https://github.com/timini/drill-me/blob/main/docs/the-science.md);
 this file is the operating manual. The scheduling math is in `scheduling.md`.
 
 ## The cardinal rules
@@ -24,6 +25,7 @@ this file is the operating manual. The scheduling math is in `scheduling.md`.
 - **Use the AskUserQuestion tool** for: confidence ratings, multiple-choice scaffolds
   after a miss, "which of these would you like next", and discrimination questions
   ("which approach applies here: A or B?"). It makes the session feel like an app.
+  If the tool isn't available, offer a short numbered list and ask for the number.
 - **Confidence before reveal.** For substantive recall questions, after they answer ask
   "How confident, 1–5?" (AskUserQuestion, options 1–2 / 3 / 4–5) *before* telling them
   if they're right. Skip it for quick-fire warmups so it doesn't get tedious — roughly
@@ -76,7 +78,8 @@ drilling one thing, and that's exactly why it works."
    correct errors and name what they missed — the gaps become next session's queue.
 3. Update the ledger per `scheduling.md`, regenerate `index.md`.
 4. Sign off with concrete next steps: "Run `/drill:me <topic>` on Thursday — 3 cards
-   come due, including the one you were confident-wrong about."
+   come due, including the one you were confident-wrong about." (Use whichever command
+   the learner invoked — `/drill-me` if they installed the standalone skill.)
 
 ## The difficulty servo (85% rule)
 

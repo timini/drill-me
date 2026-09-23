@@ -108,7 +108,9 @@ Then:
 /drill:status        # what's due, weak spots, what to study next
 ```
 
-Or as standalone skills (gives you bare `/drill-me` and `/drill-status`):
+Or as standalone skills via [skills.sh](https://skills.sh) — works with Claude Code,
+Codex, Cursor and other [Agent Skills](https://agentskills.io) hosts, and gives you bare
+`/drill-me` and `/drill-status`:
 
 ```bash
 npx skills add timini/drill-me

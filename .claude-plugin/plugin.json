@@ -1,7 +1,7 @@
 {
   "name": "drill",
   "displayName": "drill-me",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The inverse of /grill-me: an adaptive tutor that teaches you anything — spaced repetition, retrieval practice, and a memory that persists between sessions.",
   "author": {
     "name": "Tim Richardson",

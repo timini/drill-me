@@ -2,6 +2,11 @@
 name: drill-status
 description: Show drill-me learning progress — topics studied, cards due for review, weakest concepts, and what to study next. Use when the user asks what's due, how their learning is going, or for their drill-me status.
 allowed-tools: "Read Glob Bash"
+license: MIT
+metadata:
+  author: Tim Richardson
+  homepage: https://github.com/timini/drill-me
+  version: "1.0.1"
 ---
 
 # drill-status
@@ -10,7 +15,8 @@ Report on the user's learning state. Read-only — no teaching, no ledger writes
 
 1. Run `date +%Y-%m-%d`.
 2. Read `~/.drill-me/index.md` and every file in `~/.drill-me/topics/`.
-   If the directory doesn't exist, say so and suggest `/drill:me <topic>` to start.
+   If the directory doesn't exist, say so and suggest `/drill:me <topic>` to start
+   (`/drill-me <topic>` if installed as a standalone skill).
 3. Print a compact report:
    - A table of topics: cards, due now, next due date, last session.
    - **Weak spots**: cards flagged `cw` (confident-wrong) or `leech`, and any card with

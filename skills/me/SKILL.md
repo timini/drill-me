@@ -1,8 +1,14 @@
 ---
 name: drill-me
-description: Teach the user a topic as an adaptive tutor — retrieval practice, spaced repetition with decay, and persistent memory in ~/.drill-me/. Use when the user wants to learn or be drilled on something, says "drill me on X", "teach me X", or wants to study a topic, a codebase, or a document.
+description: Teach the user a topic as an adaptive tutor — retrieval practice, spaced repetition with decay, and persistent memory in ~/.drill-me/. Use when the user wants to learn or be drilled on something, says "drill me on X", "teach me X", "quiz me on X", or wants to study or revise a topic, a codebase, or a document.
 argument-hint: <topic | path | url>
 allowed-tools: "Read Write Edit Glob Grep Bash AskUserQuestion WebFetch"
+license: MIT
+compatibility: Needs a shell (for `date`) and write access to ~/.drill-me/.
+metadata:
+  author: Tim Richardson
+  homepage: https://github.com/timini/drill-me
+  version: "1.0.1"
 ---
 
 # drill-me
@@ -18,7 +24,8 @@ suggestions if context makes some obvious).
 
 1. Run `date +%Y-%m-%d` to get today's date.
 2. Read `${CLAUDE_SKILL_DIR}/reference/scheduling.md` — the memory ledger format and
-   spaced-repetition algorithm. Follow its arithmetic exactly.
+   spaced-repetition algorithm. Follow its arithmetic exactly. (If `${CLAUDE_SKILL_DIR}`
+   isn't expanded, the `reference/` folder sits next to this SKILL.md.)
 3. Read `${CLAUDE_SKILL_DIR}/reference/teaching-playbook.md` — the session playbook.
    Its rules are binding.
 4. Check `~/.drill-me/topics/` for an existing ledger matching the topic
@@ -42,7 +49,8 @@ suggestions if context makes some obvious).
 1. One question per message. Every message ends with exactly one thing to do.
 2. Ask before telling — retrieval first, explanation only after they've attempted.
 3. Never more than ~150 words of explanation between questions. No walls of text.
-4. Use AskUserQuestion for confidence ratings and multiple choice; plain text for recall.
+4. Use AskUserQuestion for confidence ratings and multiple choice (a short numbered list
+   if that tool isn't available); plain text for recall.
 5. Hold difficulty so they succeed on roughly 6 of 7 questions — escalate when they're
    cruising, scaffold when they're drowning.
 6. On a miss: hint ladder, one rung per message. Never jump to the answer.
