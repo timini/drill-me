@@ -1,0 +1,29 @@
+name: Release
+
+# Tags and publishes a GitHub release whenever the version in plugin.json changes on main.
+on:
+  push:
+    branches: [main]
+    paths:
+      - .claude-plugin/plugin.json
+      - .github/workflows/release.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create release if this version is untagged
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="v$(jq -r .version .claude-plugin/plugin.json)"
+          if gh release view "$version" >/dev/null 2>&1; then
+            echo "$version already released"
+            exit 0
+          fi
+          gh release create "$version" --target "$GITHUB_SHA" --title "drill-me $version" --generate-notes
