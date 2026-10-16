@@ -7,6 +7,8 @@ of *you*. It quizzes before it explains, spaces reviews on a forgetting curve, k
 you at the difficulty sweet spot, and remembers exactly what you were shaky on —
 across sessions, across projects, forever (or until you `rm -rf ~/.drill-me`).
 
+![A drill-me session: Claude asks before it explains, then checks confidence](docs/images/session.png)
+
 ```
 /drill:me rust lifetimes
 /drill:me this repo's auth flow
